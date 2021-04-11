@@ -22,7 +22,12 @@ class _NaveScreenState extends State<NaveScreen> {
       body: Stack(
         children: _screens
             .asMap()
-            .map((i, screen) => MapEntry(i, Offstage(offstage: _selectedIndex != i, child: screen)))
+            .map((i, screen) => MapEntry(
+                i,
+                Offstage(
+                  offstage: _selectedIndex != i,
+                  child: screen,
+                )))
             .values
             .toList(),
       ),
